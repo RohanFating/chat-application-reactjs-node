@@ -1,0 +1,135 @@
+.App {
+  margin: 30px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.app-nav{
+  position: sticky;
+  top: 0;
+  z-index: 12;
+}
+
+.app-right-container {
+  position: relative;
+  float: left;
+  width: 60%;
+}
+
+.msgs-wrapper {
+  float: right;
+}
+
+.typing-container {
+  position: fixed;
+  bottom: 20px;
+  width: 60%;
+}
+
+.app-msg {
+  height: 50px;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 10px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.contact-wrapper {
+  padding: 10px;
+}
+.nav-btn--mobile{
+  display: none;
+}
+
+li.row.contact-wrapper.text-primary:hover {
+  background: #0275d8 !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.contact-wrapper-select.text-primary {
+  background: #d2d3d6 !important;
+  color: black !important;
+}
+
+.msg-counter {
+  padding: 0;
+  margin-left: -5px;
+}
+
+.msg-counter-badge {
+  padding: 2px 7px;
+  border-radius: 23px;
+  color: white;
+  background: #0275d8;
+  line-height: 50px;
+}
+li.row.contact-wrapper.text-primary:hover .msg-counter-badge {
+  background: white;
+  color: #0275d8;
+}
+.cantact-image {
+  height: 45px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) { 
+  .typing-container {
+    width: 100%;
+  }
+  .nav-btn--mobile{
+    display: inline;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .hide-contact {
+    display: none;
+  }
+  .show-contact{
+    display: block;
+    position: absolute !important;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+    transition: 0.5s;
+    width: 100%;
+    -webkit-animation: moveRight 1s; /* Safari 4.0 - 8.0 */
+    animation: moveRight 1s;
+  }
+ }
+
+ @-webkit-keyframes moveRight {
+     from {left: -400px;}
+     to {left: 0px;}
+ }
+ 
+ /* Standard syntax */
+ @keyframes moveRight {
+    from {left: -400px;}
+     to {left: 0px;}
+ }
